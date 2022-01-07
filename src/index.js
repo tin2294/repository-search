@@ -37,3 +37,11 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// 1. Fetch info from API and organize (Fri morning)
+// 2. Implement Search Function and figure out what user is in: maybe a form? (Fri evening)
+// 3. Front end (Fri evening, Sat morning)
+// 4. Testing with an existing user, nonexisting user, and repos found and not found (Sat morning)
+// 5. Write README (Sun morning)
+// 6. Heroku (Sun morning)
