@@ -52,17 +52,10 @@ function RepositoriesList() {
   ));
 };
 
-
-// const client = new ApolloClient({
-//   uri: 'https://48p1r2roz4.sse.codesandbox.io',
-//   cache: new InMemoryCache()
-// });
-
-
 function App() {
   return (
     <div>
-      <h2>My first Apollo app 🚀</h2>
+      <h2>Repositories 🚀</h2>
       < RepositoriesList />
     </div>
   );
