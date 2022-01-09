@@ -103,7 +103,7 @@ reportWebVitals();
 
 // [X] 1. Front end -> cards per repo (1-2pm)
 // [X] 2. Token situation (2-3pm)
-// [ ] 3. Heroku (Sun morning) (4:30-5:30pm)
+// [X] 3. Heroku (Sun morning) (4:30-5:30pm)
 // [ ] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
 // [ ] 5. Responsiveness
 // [ ] 6. Testing with an existing user, nonexisting user,
