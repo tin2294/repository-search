@@ -11,7 +11,7 @@
   <h3 align="center">Search Repositories</h3>
 
   <p align="center">
-    Easily view and search your github user repositories by name.
+    Easily view and search github user repositories by name.
     <br />
     <a href="https://github.com/tin2294/repository-search"><strong>Explore the docs »</strong></a>
     <br />
@@ -29,7 +29,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Test Suite</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#future">Future Improvements</a></li>
     <li><a href="#feedback">Feedback</a></li>
   </ol>
 </details>
@@ -41,16 +41,9 @@
 
 <img align="center" src="public/repositories-demo.png">
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This app allows you to search through a list of repositories by their name. It will give you the results as you type and it shows the username and its picture.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
+Each card shows the name of each of the repositories in the list.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -58,35 +51,41 @@ Use the `BLANK_README.md` to get started.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This project has been deployed on Heroku and can be accessed here:
+<br>
+<a href="https://repository-search-ttchz.herokuapp.com/">View Demo</a>
+<br>
 
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-1. Get a free API Key at [https://example.com](https://example.com)
+In order to run it locally:
+
+1. Get a an API Token for GitHub [https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token](https://docs.github.com/es/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/tin2294/repository-search
    ```
 3. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Create a .env file to store your token in
+   ```sh
+   touch .env
+   ```
+5. Enter your API in `.env`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN='insert your token here';
    ```
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Now you can run this project locally!
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Test Suite
 
-I started trying one test which is on the Search.js file where I just text for the text in the placeholder of the Search Bar.
+As of now and as a starting point for testing in this app, I implemented a test which is on the Search.js file where I just check for the text in the placeholder of the Search Bar.
 
-In order to execute the tests, just run this on the terminal:
+In order to execute the tests, run this command on the terminal:
    ```sh
    npm test
    ```
@@ -94,8 +93,8 @@ In order to execute the tests, just run this on the terminal:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-## Roadmap
+<!-- Future Improvements -->
+## Future Improvements
 
 - [X] Make repositories into cards
 - [X] Responsiveness
