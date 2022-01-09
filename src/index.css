@@ -215,3 +215,10 @@ p {
   margin-bottom: 36px;
   height: 100%;
 }
+
+.count {
+  margin: 24px 0px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  color: #000;
+}

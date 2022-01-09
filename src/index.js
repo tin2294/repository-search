@@ -129,7 +129,7 @@ function App() {
   // call the filterRepos function that filters all the repositories called by
   // GetRepos based on the search term that searchQuery gets
   const filteredRepos = filterRepos(GetRepos(), searchQuery);
-
+  if (filteredRepos) {var count = filteredRepos.length};
   // calling the avatar function
   const avatar = GetAvatar();
   const username = GetUsername();
@@ -151,6 +151,7 @@ function App() {
         />
       </div>
       <div className="lower">
+        <div className="count">{count} repositories found</div>
         <div className="repo-list container-cards">
           {filteredRepos && filteredRepos.map(repo => <div className="card" key={repo.name}>{repo.name}</div>)}
         </div>
@@ -171,13 +172,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-// [X] 1. Front end -> cards per repo (1-2pm)
-// [X] 2. Token situation (2-3pm)
-// [X] 3. Heroku (Sun morning) (4:30-5:30pm)
-// [X] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
-// [X] 5. Responsiveness
-// [X] 6. Testing with an existing user, nonexisting user,
-//        and repos found and not found (Sat morning) (6-8:30pm)
-// [ ] 7. Refactor code & finish README
-// [X] 8. Avatar of user (8:30-9:30pm)

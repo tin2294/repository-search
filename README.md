@@ -100,10 +100,10 @@ In order to execute the tests, run this command on the terminal:
 - [X] Responsiveness
 - [X] Heroku Deployment
 - [X] Add avatar and username
-- [ ] Add count of results
+- [X] Add count of results
 - [ ] Add additional tests
 - [ ] Refactor code
-- [ ] Search Repositories and information through username and not just logged in
+- [ ] Search Repositories and information through a username search bar
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
