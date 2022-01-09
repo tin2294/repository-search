@@ -2,6 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
+// search bar on the page
 const SearchBar = ({ searchQuery, setSearchQuery }) => (
   <div class="wrap">
     <form class="search" action="/" method="get">
@@ -10,6 +11,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => (
           <span className="visually-hidden">Search Repositories</span>
         </label>
         <input
+          // in order to get the value as we type
           value={searchQuery}
           onInput={e => setSearchQuery(e.target.value)}
           type="text"

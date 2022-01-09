@@ -14,6 +14,8 @@ import {
 } from "@apollo/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+// Connecting to the GitHub v4 API
 const token = process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 const client = new ApolloClient({
@@ -24,11 +26,13 @@ const client = new ApolloClient({
   }
 });
 
+
+// GraphQL query in order to get repositories from the API
 const GET_REPOSITORIES = gql`
    query repositories {
     viewer {
         login
-        repositories(first: 30) {
+        repositories(first: 50) {
             edges {
                 node {
                 name
@@ -40,6 +44,8 @@ const GET_REPOSITORIES = gql`
 `;
 
 
+// filterRepos filters the full list of repositories based on the search term (query)
+// it returns an array with the names of the repositories
 const filterRepos = (repos, query) => {
   if (!query) {
     return repos;
@@ -52,6 +58,8 @@ const filterRepos = (repos, query) => {
 };
 
 
+// GetRepos performs the GQL query GET_REPOSITORIES and returns the information
+// from the query to the API.
 function GetRepos() {
   const { loading, error, data } = useQuery(GET_REPOSITORIES);
   if (loading) return;
@@ -65,12 +73,18 @@ function GetRepos() {
 };
 
 
+// Main App rendered in the body of the HTML
 function App() {
+  // retrieve the search term from the url
   const { search } = window.location;
   const query = new URLSearchParams(search).get('s');
-  const repos1 = GetRepos();
+
+  // get results as we type on the searchbar
   const [searchQuery, setSearchQuery] = useState(query || '');
-  const filteredRepos = filterRepos(repos1, searchQuery);
+
+  // call the filterRepos function that filters all the repositories called by
+  // GetRepos based on the search term that searchQuery gets
+  const filteredRepos = filterRepos(GetRepos(), searchQuery);
   return (
     <div>
       <div className="upper">
@@ -80,7 +94,7 @@ function App() {
           setSearchQuery={setSearchQuery}
         />
       </div>
-      <div className="repo-list container">
+      <div className="repo-list container-cards">
         {filteredRepos && filteredRepos.map(repo => <div className="card" key={repo.name}>{repo.name}</div>)}
       </div>
     </div>
@@ -104,10 +118,10 @@ reportWebVitals();
 // [X] 1. Front end -> cards per repo (1-2pm)
 // [X] 2. Token situation (2-3pm)
 // [X] 3. Heroku (Sun morning) (4:30-5:30pm)
-// [ ] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
+// [X] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
 // [ ] 5. Responsiveness
 // [ ] 6. Testing with an existing user, nonexisting user,
 //        and repos found and not found (Sat morning) (6-8:30pm)
-// [ ] 7. Refactor code
+// [ ] 7. Refactor code & finish README
 // [ ] 8. Avatar of user (8:30-9:30pm)
 // [ ] 9. More Repo info
