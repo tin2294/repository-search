@@ -1,13 +1,5 @@
 <div id="top"></div>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -47,7 +39,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="public/repositories-demo.png" alt="Logo" width="160" height="128">
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -120,6 +112,6 @@ In order to execute the tests, just run this on the terminal:
 
 ## Feedback
 
-It has been a great learning experience as I had never used React, GraphQL or started testing on my own.
+It has been a great learning experience as I had never used React, GraphQL or started testing on my own. I definitely wish to spend more time learning about testing for React and JS.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
