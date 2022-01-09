@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://repository-search-ttchz.herokuapp.com/">
+  <a href="https://repository-search-ttchz.herokuapp.com/" target="_blank">
     <img src="public/data-repository-icon-5.jpeg" alt="Logo" width="80" height="80">
   </a>
 
@@ -13,10 +13,10 @@
   <p align="center">
     Easily view and search github user repositories by name.
     <br />
-    <a href="https://github.com/tin2294/repository-search"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tin2294/repository-search" target="_blank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://repository-search-ttchz.herokuapp.com/">View Demo</a>
+    <a href="https://repository-search-ttchz.herokuapp.com/" target="_blank">View Demo</a>
   </p>
 </div>
 
@@ -53,7 +53,7 @@ Each card shows the name of each of the repositories in the list.
 
 This project has been deployed on Heroku and can be accessed here:
 <br>
-<a href="https://repository-search-ttchz.herokuapp.com/">View Demo</a>
+<a href="https://repository-search-ttchz.herokuapp.com/" target="_blank">View Demo</a>
 <br>
 
 In order to run it locally:

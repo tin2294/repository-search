@@ -150,8 +150,10 @@ function App() {
           setSearchQuery={setSearchQuery}
         />
       </div>
-      <div className="repo-list container-cards">
-        {filteredRepos && filteredRepos.map(repo => <div className="card" key={repo.name}>{repo.name}</div>)}
+      <div className="lower">
+        <div className="repo-list container-cards">
+          {filteredRepos && filteredRepos.map(repo => <div className="card" key={repo.name}>{repo.name}</div>)}
+        </div>
       </div>
     </div>
   );

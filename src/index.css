@@ -115,14 +115,14 @@ body {
   text-align: center;
   height: 32vh;
   padding-top: 8vh;
-  margin-bottom: 4vh;
+  margin-bottom: 2vh;
 }
 
 .repo-list {
   /* margin-top: 20px; */
   width: 100vh;
   text-align: center;
-  height: 50vh;
+  height: 60vh;
 }
 
 h2 {
@@ -182,7 +182,8 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   grid-gap: 48px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  height: 80%;
 }
 
 .card {
@@ -191,7 +192,7 @@ p {
   color: #000;
   line-height: 1.25;
   position: relative;
-  height: 16vh;
+  height: 18vh;
   padding-left: 8px;
   padding-right: 8px;
   justify-content: center;
@@ -208,4 +209,9 @@ p {
 
 .title {
   margin-top: 24px;
+}
+
+.lower {
+  margin-bottom: 36px;
+  height: 100%;
 }
