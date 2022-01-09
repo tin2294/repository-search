@@ -101,6 +101,7 @@ In order to execute the tests, run this command on the terminal:
 - [X] Heroku Deployment
 - [X] Add avatar and username
 - [X] Add count of results
+- [ ] Additional Heroku push with the latest updates (avatar and username, responsiveness and some styling) since the version that is up is not the current one from the repository as I encountered some technical issues that I finally had to open a ticket for.
 - [ ] Add additional tests
 - [ ] Refactor code
 - [ ] Search Repositories and information through a username search bar
