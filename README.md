@@ -13,7 +13,7 @@
   <p align="center">
     Easily view and search github user repositories by name.
     <br />
-    <a href="https://github.com/tin2294/repository-search" target="_blank"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/tin2294/repository-search" target="blank"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://repository-search-ttchz.herokuapp.com/" target="_blank">View Demo</a>
