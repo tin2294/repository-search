@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import { useState } from 'react';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import './App.css';
-import SearchBar from './search';
+import SearchBar from './Search';
 import {
   ApolloClient,
   InMemoryCache,
@@ -42,6 +41,51 @@ const GET_REPOSITORIES = gql`
     }
 }
 `;
+
+// GraphQL query in order to get the logged in user's avatar url
+const GET_AVATAR = gql`
+  query GetAbout {
+    viewer {
+        login
+        id
+        name
+        bio
+        avatarUrl
+        location
+        url
+        status {
+          emojiHTML
+          message
+        }
+        company
+      }
+    }
+`;
+
+
+// function to execute the avatar query and get the png url
+function GetAvatar() {
+  const { loading, error, data } = useQuery(GET_AVATAR);
+  if (loading) return;
+  if (error) return;
+  return (
+    `${data.viewer.avatarUrl}.png`
+    // data.viewer
+  );
+};
+
+
+// function to execute the avatar query and get the png url
+function GetUsername() {
+  const { loading, error, data } = useQuery(GET_AVATAR);
+  if (loading) return;
+  if (error) return;
+  return (
+    // `${data.viewer.avatarUrl}.png`
+    data.viewer.login
+  );
+};
+
 
 
 // filterRepos filters the full list of repositories based on the search term (query)
@@ -85,10 +129,22 @@ function App() {
   // call the filterRepos function that filters all the repositories called by
   // GetRepos based on the search term that searchQuery gets
   const filteredRepos = filterRepos(GetRepos(), searchQuery);
+
+  // calling the avatar function
+  const avatar = GetAvatar();
+  const username = GetUsername();
+
   return (
     <div>
       <div className="upper">
-        <h2>My Repositories 🚀</h2>
+        <div className="user">
+          <img class="avatar-large" alt="avatar-large" src={avatar} />
+          <h6>{username}</h6>
+        </div>
+        <div className="title">
+          <h2>My Repositories 🚀
+          </h2>
+        </div>
         < SearchBar
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
@@ -114,14 +170,12 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-
 // [X] 1. Front end -> cards per repo (1-2pm)
 // [X] 2. Token situation (2-3pm)
 // [X] 3. Heroku (Sun morning) (4:30-5:30pm)
 // [X] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
-// [ ] 5. Responsiveness
-// [ ] 6. Testing with an existing user, nonexisting user,
+// [X] 5. Responsiveness
+// [X] 6. Testing with an existing user, nonexisting user,
 //        and repos found and not found (Sat morning) (6-8:30pm)
 // [ ] 7. Refactor code & finish README
-// [ ] 8. Avatar of user (8:30-9:30pm)
-// [ ] 9. More Repo info
+// [X] 8. Avatar of user (8:30-9:30pm)

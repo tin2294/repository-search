@@ -17,7 +17,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => (
           type="text"
           className="searchTerm"
           id="header-search"
-          placeholder="Search blog posts"
+          placeholder="Search Repositories"
           name="s"
         />
       </div>
