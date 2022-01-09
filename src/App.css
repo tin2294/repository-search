@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Raleway:wght@100;200&family=Roboto:wght@100&display=swap');
+
 .App {
   text-align: center;
 }
@@ -47,57 +50,110 @@
     width: 1px;
 }
 
-body {
-  margin: 20px;
-}
 
-#root {
-  height: 100vh; /* Magic here */
+.search {
+  width: 100%;
+  position: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.repo-list {
-  margin-top: 20px;
-}
-
-.search {
-    width: 100%;
-    position: center;
-    display: flex;
-}
-
 .searchTerm {
-    width: 100%;
-    border: 3px solid #00b4cc;
-    border-right: none;
-    padding: 5px;
-    height: 36px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #9dbfaf;
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
 }
 
 .searchTerm:focus {
-    color: #00b4cc;
+  color: #00b4cc;
 }
 
 .searchButton {
-    width: 40px;
-    height: 36px;
-    border: 1px solid #00b4cc;
-    background: #00b4cc;
-    text-align: center;
-    color: #fff;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 20px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
 
-/*Resize the wrap to see the search bar change!*/
 .wrap {
-    width: 100%;
-    margin: 20px auto
-    /* change the margin to move where it is on the page */
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+  /* change the margin to move where it is on the page */
+}
+
+body {
+  margin: 20px;
+  background: #F9F9F9;
+  color: #495456;
+  margin: 72px;
+  /* font-family: Open Sans, sans-serif; */
+}
+
+#root {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upper {
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  padding-top: 10vh;
+}
+
+.repo-list {
+  /* margin-top: 20px; */
+  width: 100vh;
+  text-align: center;
+  height: 50vh;
+}
+
+h2 {
+  font-family: 'Merriweather', serif;
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 48px;
+  margin: 0 auto;
+}
+
+.card {
+  font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+  color: #000;
+  line-height: 1.25;
+  position: relative;
+  height: 16vh;
+  padding-left: 8px;
+  padding-right: 8px;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px -4px 8px rgba(255, 255, 255, 0.8)
 }

@@ -14,12 +14,13 @@ import {
 } from "@apollo/client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const token = process.env.REACT_APP_GITHUB_PERSONAL_ACCESS_TOKEN;
 
 const client = new ApolloClient({
   uri: "https://api.github.com/graphql",
   cache: new InMemoryCache(),
   headers: {
-    authorization: `Bearer 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`
+    authorization: `Bearer ${token}`
   }
 });
 
@@ -70,16 +71,17 @@ function App() {
   const repos1 = GetRepos();
   const [searchQuery, setSearchQuery] = useState(query || '');
   const filteredRepos = filterRepos(repos1, searchQuery);
-  console.log(filteredRepos);
   return (
     <div>
-      <h2>Repositories 🚀</h2>
-      < SearchBar
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
-      />
-      <div className="repo-list">
-        {filteredRepos && filteredRepos.map(repo => <div key={repo.name}>{repo.name}</div>)}
+      <div className="upper">
+        <h2>My Repositories 🚀</h2>
+        < SearchBar
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+        />
+      </div>
+      <div className="repo-list container">
+        {filteredRepos && filteredRepos.map(repo => <div className="card" key={repo.name}>{repo.name}</div>)}
       </div>
     </div>
   );
@@ -99,11 +101,13 @@ ReactDOM.render(
 reportWebVitals();
 
 
-// 1. Fetch info from API and organize (Fri morning)
-// 2. Implement Search Function and figure out what user is in: maybe a form? (Fri evening)
-// 3. Front end (Fri evening, Sat morning)
-// 4. Testing with an existing user, nonexisting user, and repos found and not found (Sat morning)
-// 5. Write README (Sun morning)
-// 6. Heroku (Sun morning)
-// 7. Avatar of user
-// 8. More Repo info
+// [X] 1. Front end -> cards per repo (1-2pm)
+// [X] 2. Token situation (2-3pm)
+// [ ] 3. Heroku (Sun morning) (4:30-5:30pm)
+// [ ] 4. Write README & Pseudocode (Sun morning) (5:30-6pm)
+// [ ] 5. Responsiveness
+// [ ] 6. Testing with an existing user, nonexisting user,
+//        and repos found and not found (Sat morning) (6-8:30pm)
+// [ ] 7. Refactor code
+// [ ] 8. Avatar of user (8:30-9:30pm)
+// [ ] 9. More Repo info
