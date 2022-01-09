@@ -19,7 +19,7 @@
   <h3 align="center">Search Repositories</h3>
 
   <p align="center">
-    Easily view and search your github repositories by name.
+    Easily view and search your github user repositories by name.
     <br />
     <a href="https://github.com/tin2294/repository-search"><strong>Explore the docs »</strong></a>
     <br />
@@ -34,12 +34,7 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+    <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Test Suite</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -64,18 +59,6 @@ Here's why:
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
 
 Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [React.js](https://reactjs.org/)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery]GitHub API v4
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -109,7 +92,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Test Suite
 
-Testing would be run like this.
+I started trying one test which is on the Search.js file where I just text for the text in the placeholder of the Search Bar.
+
+In order to execute the tests, just run this on the terminal:
+   ```sh
+   npm test
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,39 +105,21 @@ Testing would be run like this.
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [X] Make repositories into cards
+- [X] Responsiveness
+- [X] Heroku Deployment
+- [X] Add avatar and username
+- [ ] Add count of results
+- [ ] Add additional tests
+- [ ] Refactor code
+- [ ] Search Repositories and information through username and not just logged in
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 ## Feedback
 
-This exercise is great.
+It has been a great learning experience as I had never used React, GraphQL or started testing on my own.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
