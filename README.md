@@ -30,7 +30,10 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Test Suite</a></li>
     <li><a href="#future">Future Improvements</a></li>
+<<<<<<< HEAD
+=======
     <li><a href="#feedback">Feedback</a></li>
+>>>>>>> 9d3eb04b6771bdbfaba48dcb801f5cc819b58b6a
   </ol>
 </details>
 
@@ -106,12 +109,5 @@ In order to execute the tests, run this command on the terminal:
 - [ ] Refactor code
 - [ ] Search Repositories and information through a username search bar
 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-## Feedback
-
-It has been a great learning experience as I had never used React, GraphQL or started testing on my own. I definitely wish to spend more time learning about testing for React and JS.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
