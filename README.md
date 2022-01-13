@@ -30,6 +30,10 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#testing">Test Suite</a></li>
     <li><a href="#future">Future Improvements</a></li>
+<<<<<<< HEAD
+=======
+    <li><a href="#feedback">Feedback</a></li>
+>>>>>>> 9d3eb04b6771bdbfaba48dcb801f5cc819b58b6a
   </ol>
 </details>
 
